@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Pokemon Collection
+        a(href="/update-cobj") Add New Pokemon
+        .cards
+            each poke in data
+                .card
+                    h2.card__name #{poke.properties.pokemon_name}
+                    p.card__type Type: #{poke.properties.pokemon_type}
+                    p.card__hp HP: #{poke.properties.pokemon_hp}
