@@ -6,10 +6,16 @@ html
         link(rel="stylesheet", href="/css/style.css")
     body
         h1 Pokemon Collection
-        a(href="/update-cobj") Add New Pokemon
-        .cards
-            each poke in data
-                .card
-                    h2.card__name #{poke.properties.pokemon_name}
-                    p.card__type Type: #{poke.properties.pokemon_type}
-                    p.card__hp HP: #{poke.properties.pokemon_hp}
+        a(href="/update-cobj") Add to this table
+        table
+            thead
+                tr
+                    th Pokemon Name
+                    th Pokemon Type
+                    th Pokemon HP
+            tbody
+                each poke in data
+                    tr
+                        td #{poke.properties.pokemon_name}
+                        td #{poke.properties.pokemon_type}
+                        td #{poke.properties.pokemon_hp}

@@ -15,7 +15,7 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 
 // * Code for Route 1 goes here
 app.get('/', async (req, res) => {
-    const pokemon = 'https://api.hubspot.com/crm/v3/objects/2-52619340';
+    const pokemon = 'https://api.hubspot.com/crm/v3/objects/2-52619340?properties=pokemon_name,pokemon_type,pokemon_hp';
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
